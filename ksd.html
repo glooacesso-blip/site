@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessar Link</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fundo em degradê rosa moderno */
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f9a8d4 100%);
+            color: #831843;
+        }
+
+        /* Card central */
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 2rem;
+            padding: 3rem 2rem 2.5rem;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 25px 50px -12px rgba(190, 24, 93, 0.25);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Texto "Entra aqui e seja feliz" */
+        .chamada {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #be185d;
+            margin-bottom: 0.8rem;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(190, 24, 93, 0.15);
+        }
+
+        .chamada span {
+            color: #ec4899;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #9d174d;
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .link-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* O Link Grande */
+        #bigLink {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+            padding: 1.3rem 1.5rem;
+            border-radius: 2rem;
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+            word-break: break-all;
+            transition: all 0.2s ease;
+            box-shadow: 0 15px 30px -10px rgba(190, 24, 93, 0.5);
+            width: 100%;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        #bigLink:hover {
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0 20px 40px -10px rgba(190, 24, 93, 0.6);
+        }
+
+        #bigLink:active {
+            transform: scale(0.98);
+        }
+
+        #bigLink svg {
+            flex-shrink: 0;
+            transition: transform 0.2s;
+        }
+
+        #bigLink:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* Responsividade para telas menores (Celular) */
+        @media (max-width: 480px) {
+            .card {
+                padding: 2rem 1.2rem;
+                border-radius: 1.5rem;
+            }
+
+            .chamada {
+                font-size: 1.7rem;
+            }
+
+            .subhead {
+                font-size: 0.95rem;
+                margin-bottom: 1.8rem;
+            }
+
+            #bigLink {
+                font-size: 1.1rem;
+                padding: 1.1rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1 class="chamada">Entra aqui e <span>seja feliz</span></h1>
+        <p class="subhead">O melhor conteúdo te espera do outro lado 👇</p>
+
+        <div class="link-input-group">
+            <!-- O botão que leva para o link, sem a caixinha de texto para editar -->
+            <a id="bigLink" href="https://t.me/fgdxbot" target="_blank" rel="noopener noreferrer">
+                <span>Acessar Link</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
